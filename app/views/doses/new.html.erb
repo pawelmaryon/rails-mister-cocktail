@@ -1,0 +1,8 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%#= f.select :ingredient, Ingredient.all.map { |ing| ing.name } %>
+    <%= f.association :ingredient %>
+
+    <%= f.button :submit %>
+<% end %>
+<%= link_to 'Back', cocktails_path %>
